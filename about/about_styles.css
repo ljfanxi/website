@@ -1,0 +1,61 @@
+body {
+    /* font-family: Arial, sans-serif; All font style */
+    background-color: rgb(25,26,29); /* All background colors */
+    /* margin: 0; Reset default margin */
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 88px;
+    margin-top: 260px;
+    margin-left: 321px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+p {
+    color:#9EA1A0;
+    font-size:30px;
+    margin-top: 400x;
+    margin-left: 321px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.image-style {
+    position: absolute;
+    top: 130px;
+    left: 1240px;
+    width: 550px;
+    height: 200;
+    border-radius: 10px
+}
+
+.menu {
+    position: absolute;
+    top: 70px;
+    left: 270px;
+
+}
+
+.menu ul li {
+    display: inline;
+    margin: 0 10px;
+    font-size: 33px; /* Adjust the font size as needed */
+    
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(176 189 168);
+    text-decoration: none;
+    /* padding: 5px 10px; Add padding around the links */
+    /* border: 5px solid #803a3a; /* Add a border around the links */
+    /* border-radius: 50px; Add rounded corners to the border */
+    /* background-color: #803a3a; */ 
+}
+
+.menu ul li a:hover {
+     /* Change the background color on hover */
+    color: #ffffff; /* Change the text color on hover */
+}
