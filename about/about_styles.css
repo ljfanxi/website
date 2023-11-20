@@ -1,61 +1,83 @@
 body {
-    /* font-family: Arial, sans-serif; All font style */
-    background-color: rgb(25,26,29); /* All background colors */
-    /* margin: 0; Reset default margin */
+    overflow-x: hidden;
+    background: rgb(25, 26, 29);
+    background-size: 800% 100%;
+    animation: gradient 30s ease infinite;
+    transition: background-color 2s;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 h1 {
-    color: #ffffff;
-    font-size: 88px;
-    margin-top: 260px;
-    margin-left: 321px;
-    position: relative;
-    word-wrap: break-word;
-}
+    font-size: 5em;
+    position: relative; 
+    bottom: 30px; 
+    color: rgb(212, 255, 187);
 
-p {
-    color:#9EA1A0;
-    font-size:30px;
-    margin-top: 400x;
-    margin-left: 321px;
-    position: relative;
-    word-wrap: break-word;
 }
 
 .image-style {
-    position: absolute;
-    top: 130px;
-    left: 1240px;
-    width: 550px;
-    height: 200;
-    border-radius: 10px
+    width: 20vw;
+    height: auto;
+    margin-top: 0px; /* Default margin-top for desktop */
+    position: relative; /* Ensure the image is positioned relative to its container */
+    background-color: #ffffff;
+    padding: 4px;    
+}
+.menu {
+    margin-top: -140px;
 }
 
-.menu {
-    position: absolute;
-    top: 70px;
-    left: 270px;
-
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 .menu ul li {
     display: inline;
-    margin: 0 10px;
-    font-size: 33px; /* Adjust the font size as needed */
-    
+    margin: 0 30px;
+    font-size: 2vw;
 }
 
 .menu ul li a {
     text-decoration: none;
-    color: rgb(176 189 168);
-    text-decoration: none;
-    /* padding: 5px 10px; Add padding around the links */
-    /* border: 5px solid #803a3a; /* Add a border around the links */
-    /* border-radius: 50px; Add rounded corners to the border */
-    /* background-color: #803a3a; */ 
+    color: rgb(212, 255, 187);
 }
 
 .menu ul li a:hover {
-     /* Change the background color on hover */
-    color: #ffffff; /* Change the text color on hover */
+    color: #ffffff;
+}
+
+/* Example of a media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .image-style {
+        width: 100%;
+    }
+    .menu {
+        margin-top: 0px;
+    }
+    
+    .menu ul li {
+        margin: 0 2.6vw;
+        font-size: 4vw;
+    }
+    h1 {
+        font-size: 1em;
+        bottom: 0px;
+        color: rgb(212, 255, 187);
+        text-align: center; 
+        
+    }
+    p {
+        font-size: 1em;
+        bottom: -10px;
+        color: #ffffff;
+        text-align: center; 
+        
+    }
 }

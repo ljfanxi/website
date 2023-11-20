@@ -1,109 +1,117 @@
 body {
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    background: rgb(25,26,29);
+    overflow-x: hidden;
+    background: rgb(25, 26, 29);
     background-size: 800% 100%;
     animation: gradient 30s ease infinite;
     transition: background-color 2s;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 h1 {
-    color: rgb(255 255 255);
-    font-size: 88px;
-    margin-top: 260px;
-    margin-left: 321px;
-    position: relative;
-    word-wrap: break-word;
+    color: rgb(212, 255, 187);
+    font-size: 5vw;
+    margin-top: 2vw;
 }
 
-.second-heading {
-    color: #732d2dea; /* You can choose any color you want for the second heading */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-p {
-    color:#ffffff;
-    font-size:30px;
-    margin-top: 400x;
-    margin-left: 321px;
-    position: relative;
-    word-wrap: break-word;
-}
-
-.second-paragraph{
-    color: black;
-    position: absolute;
-    top: 490px;
-    left: 7px;
-    z-index: -1;
-
-}
 
 .image-style {
-    position: absolute;
-    top: -64px;
-    left: 1285px;
-    width: 1100px; /* Adjust the width as needed */
-    height: 1020px; /* Adjust the height as needed */
+    width: 60vw;
+    height: auto;
+    margin-top: -40px; /* Default margin-top for desktop */
+    position: relative; /* Ensure the image is positioned relative to its container */
+    z-index: 2; /* Place the image above the background text */
 }
 
 .menu {
-    position: absolute;
-    top: 70px;
-    left: 270px;
+    margin-top: 50px;
+}
 
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 .menu ul li {
     display: inline;
-    margin: 0 10px;
-    font-size: 33px; /* Adjust the font size as needed */
-    
+    margin: 0 30px;
+    font-size: 2vw;
 }
 
 .menu ul li a {
     text-decoration: none;
-    color: rgb(176 189 168);
-    text-decoration: none;
-    /* padding: 5px 10px; Add padding around the links */
-    /* border: 5px solid #803a3a; /* Add a border around the links */
-    /* border-radius: 50px; Add rounded corners to the border */
-    /* background-color: #803a3a; */ 
+    color: rgb(212, 255, 187);
 }
 
 .menu ul li a:hover {
-     /* Change the background color on hover */
-    color: #ffffff; /* Change the text color on hover */
+    color: #ffffff;
+}
+
+.second_header::before {
+    content: "Hi";
+    position: absolute;
+    top:1000px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100vw;
+    color: #ffe6004d;
+    z-index: -1;
+    pointer-events: none; /* This ensures that the pseudo-element doesn't capture pointer events */
+}
+
+/* Add padding to .second_header if needed */
+.second_header {
+    position: relative;
+    z-index: 2;
+    font-family: Georgia, serif;
+    padding: 0; /* Adjust the padding as needed */
 }
 
 .custom-button {
-    /* Styles for the custom button */
-    position: absolute;
-    top: 650px;
-    left: 321px;
-    padding: 27px 70px;
-    font-size: 25px;
-    background-color: #211b1b; /* Make the button transparent */
-    color: rgb(212 255 187);
-    /* border: 1 solid #803a3a; Add a border around the links */
+    position: relative;
+    padding: 2vw 5vw;
+    font-size: 2vw;
+    background-color: #211b1b;
+    color: rgb(212, 255, 187);
     border-radius: 50px;
+    margin-top: 2vw;
+    cursor: pointer; /* Use "pointer" for a hand cursor */
 }
 
-.custom-button:hover {
-    /* Styles for the button on hover */
-    cursor: pointer;
-    color:#ffffff; /* Change the text color on hover */
+@media (max-width: 750px) {
+    body {
+        min-height: 95vh; /* Adjust the min-height value for the mobile view */
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    .image-style {
+        margin-top: -40px; 
+        width: 80vw; 
+    }
+
+    .menu {
+        margin-top: 10px !important;
+    }
+
+    .menu ul li {
+        font-size: 4vw;
+        margin: 0 10px;
+    }
+
+    .custom-button {
+        font-size: 4vw;
+    }
+    .second_header::before {
+        top: 300px;
+
+    }
+    
 }

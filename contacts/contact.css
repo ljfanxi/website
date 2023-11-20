@@ -1,61 +1,97 @@
 body {
-    /* font-family: Arial, sans-serif; All font style */
-    background-color: rgb(25,26,29); /* All background colors */
-    /* margin: 0; Reset default margin */
+    background-color: rgb(25, 26, 29);
+    margin: 0;
+    text-align: center;
 }
 
 h1 {
-    color: #ffffff;
-    font-size: 88px;
-    margin-top: 260px;
-    margin-left: 321px;
+    color: rgb(212, 255, 187);
+    font-size: 6vw;
+    margin-top: 6vw;
     position: relative;
-    word-wrap: break-word;
 }
 
 p {
-    color:#9EA1A0;
-    font-size:30px;
-    margin-top: 400x;
-    margin-left: 321px;
+    color: white;
+    font-size: 2vw;
+    margin-top: 2vw;
     position: relative;
-    word-wrap: break-word;
-}
-
-.image-style {
-    position: absolute;
-    top: 130px;
-    left: 1240px;
-    width: 550px;
-    height: 200;
-    border-radius: 10px
 }
 
 .menu {
-    position: absolute;
-    top: 70px;
-    left: 270px;
+    margin-top: 70px;
+    text-align: center;
+}
 
+.menu ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 .menu ul li {
     display: inline;
-    margin: 0 10px;
-    font-size: 33px; /* Adjust the font size as needed */
-    
+    margin: 0 1.5vw;
+    font-size: 2vw;
 }
 
 .menu ul li a {
     text-decoration: none;
-    color: rgb(176 189 168);
-    text-decoration: none;
-    /* padding: 5px 10px; Add padding around the links */
-    /* border: 5px solid #803a3a; /* Add a border around the links */
-    /* border-radius: 50px; Add rounded corners to the border */
-    /* background-color: #803a3a; */ 
+    color: rgb(212, 255, 187);
 }
 
 .menu ul li a:hover {
-     /* Change the background color on hover */
-    color: #ffffff; /* Change the text color on hover */
+    color: #ffffff;
+}
+
+/* Styles for the Footer */
+footer {
+    margin-top: 7vw;
+}
+
+.social-media {
+    display: inline-block;
+    margin: 0 1vw;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.social-media:hover {
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+
+.social-media img {
+    width: 50px; /* Adjust the width as needed */
+}
+
+.social-media span {
+    color: white;
+    font-size: 1.5vw;
+    display: block;
+    margin-top: 0.5vw;
+}
+
+footer p {
+    color: white;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        margin-top: 54px; /* Adjust the margin as needed */
+    }
+ margin: 0 2.6vw;
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu ul li {
+        display: inline;
+        margin: 10px;
+        font-size: 4.1vw;
+        margin: 0 2.9vw;
+    }
 }
