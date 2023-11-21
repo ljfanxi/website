@@ -83,11 +83,29 @@ h1 {
     cursor: pointer; /* Use "pointer" for a hand cursor */
 }
 
+.scroll-button {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #211b1b;
+    color: rgb(212, 255, 187);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
 @media (max-width: 750px) {
     body {
         min-height: 95vh; /* Adjust the min-height value for the mobile view */
     }
-
+    .scroll-button {
+        font-size: 4vw;
+        display: none;
+    }
     h1 {
         font-size: 8vw;
     }

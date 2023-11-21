@@ -44,6 +44,7 @@ h1 {
 
 .menu ul li a:hover {
     color: #ffffff;
+    transform: scale(1.1);
 }
 
 .w3-content {
@@ -79,13 +80,29 @@ p {
     font-size: 1.2em; 
     margin: 15px 0; 
 }
-
+.scroll-button {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #211b1b;
+    color: rgb(212, 255, 187);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
 @media only screen and (max-width: 600px) {
     body {
         flex-direction: column;
         align-items: center;
     }
-
+    .scroll-button {
+        padding: 5px; /* Adjust the padding to make it smaller */
+    }
     h1 {
         font-size: 10vw;
     }
