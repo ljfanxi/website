@@ -127,4 +127,7 @@ p {
         font-size: 1.5em;
         margin: 20px 0;
     }
+    a {
+        color: blue;
+    }
 }
